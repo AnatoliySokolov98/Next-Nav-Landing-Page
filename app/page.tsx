@@ -16,7 +16,10 @@ export default function Home() {
 	return (
 		<section className='flex flex-col items-center justify-center gap-y-10'>
 			<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-				<div className="inline-block max-w-lg text-center justify-center">
+
+
+
+				<div className="inline-block text-center justify-center">
 					<h1 className={title({size: "lg"})}>NEXT.NAV</h1><br/><br/>
 					<h2 className={title({size: 'sm'})}>Navigate and Create routes&nbsp;</h2>
 					<h2 className={title({ color: "blue", size: 'sm' })}>easily&nbsp;</h2>
