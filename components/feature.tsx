@@ -2,7 +2,10 @@ import React from 'react'
 import { Card, CardHeader, CardBody } from "@nextui-org/card";
 import {Divider} from "@nextui-org/divider"
 import { Image } from "@nextui-org/image";
-import { title, subtitle } from "./primitives";
+import { title } from "./primitives";
+
+
+
 
 type props = {
   header: string,
@@ -14,7 +17,7 @@ type props = {
 const Feature = ({header, bullets, path, alttext}: props) => {
   return (
     <div className='flex justify-space-between align-center'>
-      <Card className='mt-10 px-5 w-[65vw] flex flex-col'>
+      <Card className='mt-10 p-5 w-[65vw] flex flex-col'>
         <CardHeader className='flex flex-col'>
           <h2 className={title({size: 'sm'})}>
             {header}
@@ -22,7 +25,9 @@ const Feature = ({header, bullets, path, alttext}: props) => {
         </CardHeader>
         <CardBody className='flex flex-col gap-5 items-center'>
           <Divider />
-          <Image className="outline outline-offset-1 outline-1 outline-blue-500" src={path} height={200} width={600} alt={alttext} />
+          <div className='w-[70%] h-[100%]'>
+            <Image src={path} width='100%' height='100%' alt={alttext} className='outline outline-offset-1 outline-1 outline-blue-500'/>
+          </div>
           <Divider/>
           <ul className='list-disc list-inside'>
           {bullets.map((item, index) => (
