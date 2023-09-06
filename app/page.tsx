@@ -4,7 +4,8 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
-import Image from "next/image";
+// import Image from "next/image";
+import { Image } from "@nextui-org/image"
 import Feature from "@/components/feature";
 import Profile from "@/components/profile";
 
@@ -17,9 +18,8 @@ export default function Home() {
 		<section className='flex flex-col items-center justify-center gap-y-10'>
 			<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 
-
-
-				<div className="inline-block text-center justify-center">
+				<div className="flex-col">
+					<div className="inline-block text-center justify-center">
 					<h1 className={title({size: "lg"})}>NEXT.NAV</h1><br/><br/>
 					<h2 className={title({size: 'sm'})}>Navigate and Create routes&nbsp;</h2>
 					<h2 className={title({ color: "blue", size: 'sm' })}>easily&nbsp;</h2>
@@ -29,29 +29,30 @@ export default function Home() {
 					</h2><br/>
 					<h3 className={subtitle({ class: "mt-4" })}>
 						User friendly VSCode application
-					</h3>
+						</h3>
+					</div>
+					<div className="flex gap-3 justify-center mt-10">
+						<Link
+							isExternal
+							as={NextLink}
+							href={siteConfig.links.store}
+							className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
+						>
+							<Image width={20} height={20} src="/vscode-alt.svg" alt="Vscode logo"/>
+							Download from Store
+						</Link>
+						<Link
+							isExternal
+							as={NextLink}
+							className={buttonStyles({ variant: "bordered", radius: "full" })}
+							href={siteConfig.links.github}
+						>
+							<GithubIcon size={20} />
+							GitHub
+						</Link>
+					</div>
 				</div>
 
-				<div className="flex gap-3">
-					<Link
-						isExternal
-						as={NextLink}
-						href={siteConfig.links.store}
-						className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
-					>
-						<Image width={20} height={20} src="/vscode-alt.svg" alt="Vscode logo"/>
-						Download from Store
-					</Link>
-					<Link
-						isExternal
-						as={NextLink}
-						className={buttonStyles({ variant: "bordered", radius: "full" })}
-						href={siteConfig.links.github}
-					>
-						<GithubIcon size={20} />
-						GitHub
-					</Link>
-				</div>
 			</section>
 
 			<section className=" flex flex-col items-center justify-center gap-3 mt-20">
@@ -68,9 +69,8 @@ export default function Home() {
 			<section className=" flex flex-col items-center justify-center gap-3 mt-10">
 				<h2 className={title({ size: 'md' })}> Tutorial Video </h2>
 				<iframe
-					className = 'mt-5 rounded-3xl'
-					width="1120"
-					height="633"
+					className = 'mt-5 rounded-3xl w-[65vw] h-[40vw]'
+
 					src="https://www.youtube.com/embed/ZXsQAXx_ao0"
 					title="Shia LaBeouf &quot;Just Do It&quot; Motivational Speech (Original Video by LaBeouf, Rönkkö &amp; Turner)"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -78,13 +78,13 @@ export default function Home() {
 			></iframe>
 
 			</section>
-			<section className="flex flex-col items-center  gap-3 mt-10">
-				<h2 className={title({ size: 'md' })}> Meet Our Fantastic Team </h2>
-				<div className="flex items-center justify-between w-[80vw]">
+			<section className="flex flex-col items-center  gap-3 mt-20">
+				<h2 className={title({ size: 'md' })}> Meet Our Fantastic Team of Software Engineers</h2>
+				<div className="flex items-center justify-between flex-wrap w-[80vw] mt-10">
 					<Profile header="Anatoliy Sokolov" profile="bobross.jpg" alttext='anatoliy' linkedin='https://www.linkedin.com/in/anatoliy-sokolov' github='https://github.com/AnatoliySokolov98' />
-					<Profile header="Brian Henkel" profile="https://media.licdn.com/dms/image/C5603AQHC3PRNJlrTtQ/profile-displayphoto-shrink_200_200/0/1658959256427?e=1699488000&v=beta&t=s_oyJ5tIYaxUlkiI9jtASuD5iXBUElSGhdBVb4SzMxo" alttext='brian' linkedin='https://www.linkedin.com/in/b-henkel/' github='https://github.com/FANFICPDF' />
-					<Profile header="Jordan Querubin" profile="https://media.licdn.com/dms/image/D5603AQGiNzTvjZxfdg/profile-displayphoto-shrink_200_200/0/1693462569723?e=1699488000&v=beta&t=jiDZOdSshIj-0Kx__4BVYrm5VeTCOjWJCI6wRKcRaMw" alttext='jordan' linkedin='https://www.linkedin.com/in/jordanquerubin' github='https://github.com/jequerubin' />
-					<Profile header="Nathan Peel" profile="https://media.licdn.com/dms/image/D5603AQGMTkc4pOphgw/profile-displayphoto-shrink_200_200/0/1693629498457?e=1699488000&v=beta&t=xVO6NXaZQ7CseTsf0waiNvqgRRVBMQQ1DmZboO_mycM" alttext='nathan' linkedin='https://www.linkedin.com/in/nathaniel-peel/' github='https://github.com/nathanpeel' />
+					<Profile header="Brian Henkel" profile="/Brian.jpg" alttext='brian' linkedin='https://www.linkedin.com/in/b-henkel/' github='https://github.com/FANFICPDF' />
+					<Profile header="Jordan Querubin" profile="/Jordan.jpg" alttext='jordan' linkedin='https://www.linkedin.com/in/jordanquerubin' github='https://github.com/jequerubin' />
+					<Profile header="Nathan Peel" profile="/Nathan.jpg" alttext='nathan' linkedin='https://www.linkedin.com/in/nathaniel-peel/' github='https://github.com/nathanpeel' />
 				</div>
 			</section>
 

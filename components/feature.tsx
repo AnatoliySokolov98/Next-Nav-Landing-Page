@@ -25,7 +25,7 @@ const Feature = ({header, bullets, path, alttext}: props) => {
         </CardHeader>
         <CardBody className='flex flex-col gap-5 items-center'>
           <Divider />
-          <div className='w-[70%] h-[100%]'>
+          <div className='w-[80%] h-[100%]'>
             <Image src={path} width='100%' height='100%' alt={alttext} className='outline outline-offset-1 outline-1 outline-blue-500'/>
           </div>
           <Divider/>
