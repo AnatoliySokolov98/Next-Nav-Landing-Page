@@ -71,7 +71,7 @@ export const Navbar = () => {
 								)}
 								color="foreground"
 								isExternal
-								href='https://medium.com/'
+								href='https://medium.com/@nathanjames719/next-nav-the-solution-to-confusing-file-based-routing-in-next-js-3c6db2346a05'
 						>
 							Blog
 							</Link>
