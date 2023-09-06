@@ -4,7 +4,6 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
-// import Image from "next/image";
 import { Image } from "@nextui-org/image"
 import Feature from "@/components/feature";
 import Profile from "@/components/profile";
@@ -91,9 +90,3 @@ export default function Home() {
 		</section>
 	);
 }
-// type props = {
-//   title: string,
-//   bullets: string[],
-//   path: string,
-//   alttext: string,
-// }

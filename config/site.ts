@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'Next.js + NextUI',
-  description: 'Make beautiful websites regardless of your design experience.',
+  name: 'Next.Nav',
+  description: 'A VSCode extension for easily navigating and creating routes, folders, and files in Next.js applications.',
   navItems: [
     {
       label: 'Home',
