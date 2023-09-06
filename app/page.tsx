@@ -82,7 +82,7 @@ export default function Home() {
 			<section className="flex flex-col items-center  gap-3 mt-20">
 				<h2 className={title({ size: 'md' })}> Meet Our Fantastic Team of Software Engineers</h2>
 				<div className="flex items-center justify-between flex-wrap w-[80vw] mt-10">
-					<Profile header="Anatoliy Sokolov" profile="bobross.jpg" alttext='anatoliy' linkedin='https://www.linkedin.com/in/anatoliy-sokolov' github='https://github.com/AnatoliySokolov98' />
+					<Profile header="Anatoliy Sokolov" profile="/Anatoliy.jpg" alttext='anatoliy' linkedin='https://www.linkedin.com/in/anatoliy-sokolov' github='https://github.com/AnatoliySokolov98' />
 					<Profile header="Brian Henkel" profile="/Brian.jpg" alttext='brian' linkedin='https://www.linkedin.com/in/b-henkel/' github='https://github.com/FANFICPDF' />
 					<Profile header="Jordan Querubin" profile="/Jordan.jpg" alttext='jordan' linkedin='https://www.linkedin.com/in/jordanquerubin' github='https://github.com/jequerubin' />
 					<Profile header="Nathan Peel" profile="/Nathan.jpg" alttext='nathan' linkedin='https://www.linkedin.com/in/nathaniel-peel/' github='https://github.com/nathanpeel' />
