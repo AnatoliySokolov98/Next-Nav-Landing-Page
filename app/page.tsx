@@ -70,11 +70,12 @@ export default function Home() {
 				<iframe
 					className = 'mt-5 rounded-3xl w-[65vw] h-[40vw]'
 
-					src="https://www.youtube.com/embed/314OLE6mKOo"
-					title="interviewing at a startup be like... (ft. Steven He)"
+					src="https://www.youtube.com/embed/NoWs7VAJ6lw"
+					title="Next.Nav Tutorial Video"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					allowFullScreen
 			></iframe>
+
 
 
 
