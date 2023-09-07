@@ -70,8 +70,8 @@ export default function Home() {
 				<iframe
 					className = 'mt-5 rounded-3xl w-[65vw] h-[40vw]'
 
-					src="https://www.youtube.com/embed/NoWs7VAJ6lw"
-					title="Next.Nav Tutorial Video"
+					src="https://www.youtube.com/embed/uRlccYIMNb4"
+					title="Next.Nav Tutorial"
 					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
 					allowFullScreen
 			></iframe>
