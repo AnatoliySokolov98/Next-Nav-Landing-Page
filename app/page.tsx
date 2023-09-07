@@ -80,9 +80,9 @@ export default function Home() {
 
 
 			</section>
-			<section className="flex flex-col items-center  gap-3 mt-20">
+			<section className="flex flex-col items-center gap-3 mt-20">
 				<h2 className={title({ size: 'md' })}> Meet Our Fantastic Team of Software Engineers</h2>
-				<div className="flex items-center justify-between flex-wrap w-[80vw] mt-10">
+				<div className="flex items-center justify-center flex-wrap gap-10 w-[80vw] mt-10">
 					<Profile header="Anatoliy Sokolov" profile="/Anatoliy.jpg" alttext='anatoliy' linkedin='https://www.linkedin.com/in/anatoliy-sokolov' github='https://github.com/AnatoliySokolov98' />
 					<Profile header="Brian Henkel" profile="/Brian.jpg" alttext='brian' linkedin='https://www.linkedin.com/in/b-henkel/' github='https://github.com/FANFICPDF' />
 					<Profile header="Jordan Querubin" profile="/Jordan.jpg" alttext='jordan' linkedin='https://www.linkedin.com/in/jordanquerubin' github='https://github.com/jequerubin' />

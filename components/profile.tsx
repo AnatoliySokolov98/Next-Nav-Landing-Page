@@ -22,18 +22,17 @@ type props = {
 
 const Profile = ({header, profile, alttext, linkedin, github}: props) => {
   return (
-    <div className='flex justify-space-between align-center'>
-      <Card className='mt-10 p-5 flex flex-col'>
+      <Card className='mt-10 p-5 flex flex-col w-[250px] justify-space-between align-center'>
         <CardHeader className='flex flex-col'>
           <h3 className={title({size: 'ssm'})}>
             {header}
           </h3>
         </CardHeader>
-        <CardBody className='flex flex-col gap-5 items-center'>
+        <CardBody className='flex flex-col gap-5 items-center overflow-hidden'>
 
-          <Image className="outline outline-offset-1 outline-1 outline-blue-500" src={profile} height={60} width={100} alt={alttext} />
+          <Image className="outline outline-offset-1 outline-1 outline-blue-500" src={profile} height={200} width={200} alt={alttext} />
 
-          <div className = 'w-[10vw] flex items-center justify-between'>
+          <div className = 'w-[10vw] flex items-center align-center justify-center gap-10'>
           <Link isExternal href={linkedin} aria-label="LinkedIn">
 						<LinkedInIcon className="text-default-500"/>
 					</Link>
@@ -43,7 +42,6 @@ const Profile = ({header, profile, alttext, linkedin, github}: props) => {
           </div>
         </CardBody>
       </Card>
-    </div>
   )
 }
 
