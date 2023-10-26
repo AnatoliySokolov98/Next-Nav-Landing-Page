@@ -30,7 +30,7 @@ export default function Home() {
 						User friendly VSCode extension
 					</h3>
 					<h3 className={title({ color: "green", size: 'sm' })}>
-						(4k+ downloads)
+						(5k+ downloads)
 						</h3>
 
 					</div>
