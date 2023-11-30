@@ -8,9 +8,6 @@ import { Image } from "@nextui-org/image"
 import Feature from "@/components/feature";
 import Profile from "@/components/profile";
 
-
-
-
 export default function Home() {
 
 	return (
@@ -30,7 +27,7 @@ export default function Home() {
 						User friendly VSCode extension
 					</h3>
 					<h3 className={title({ color: "green", size: 'sm' })}>
-						(5k+ downloads)
+						(7k+ downloads)
 						</h3>
 
 					</div>
