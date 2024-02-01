@@ -7,6 +7,7 @@ import { GithubIcon } from "@/components/icons";
 import { Image } from "@nextui-org/image";
 import Feature from "@/components/feature";
 import Profile from "@/components/profile";
+import { cardData } from "@/config/data";
 
 export default function Home() {
   return (
@@ -69,89 +70,13 @@ export default function Home() {
 
       <section className=" flex flex-col items-center justify-center gap-3 mt-20">
         <h2 className={title({ size: "md" })}> Features Demo </h2>
-        <Feature
-          header="Opening Extension"
-          bullets={[
-            "Install the extension from VS Code Store",
-            "Open a Next.js project that is using the App Router in VSCode",
-            "Launch Next.Nav by opening the command palette using (Ctrl+Shift+P in Windows/Linux) or (Command+Shift+P MacOS) and typing Next.Nav highlight and press Enter",
-          ]}
-          path="https://i.imgur.com/10qMgfY.gif"
-          alttext="instructions"
-        />
-        <Feature
-          header="Getting File Structure"
-          bullets={[
-            "Initially you will see a file structure with some dummy data or your app folder if you have a Next Project",
-            "To get the file structure for your project first right click your app folder and click copy path or copy relative path",
-            "Then click on the import path icon and paste the path",
-            "The app will technically work on any file structure but it is best used for the App Router to display server/client rendering correctly",
-            "We will also only display javascript, typescript, or css files and ignore all other files in the display as this is designed to visualize pages easier",
-          ]}
-          path="https://i.imgur.com/sVYwqVu.gif"
-          alttext="instructions"
-        />
-        <Feature
-          header="Opening a File"
-          bullets={[
-            "When you hover over a file type in the tree it will tell you the name",
-            "You can click on the icon of the file in the folder to open it",
-            "Alternatively, you can click on the folder to open a modal with all of the files",
-            "Click on a file to open it",
-          ]}
-          path="https://i.imgur.com/zDKCPjo.gif"
-          alttext="instructions"
-        />
-        <Feature
-          header="Adding Files"
-          bullets={[
-            "Click on any blank space on a folder node to open a modal to view its contents",
-            "Add a file name and extension in the input field",
-            "Add file with the green add file icon",
-          ]}
-          path="https://i.imgur.com/xdraVMG.gif"
-          alttext="instructions"
-        />
-        <Feature
-          header="Deleting Files"
-          bullets={[
-            "Click on any blank space on a folder node to open a modal to view a folders contents",
-            "Click the red trash icon next to the file you want to delete",
-            "Click confirm in the pop-over to permanently delete the file. (warning: this can not be undone)",
-          ]}
-          path="https://i.imgur.com/U4KE5DN.gif"
-          alttext="instructions"
-        />
-        <Feature
-          header="Adding Folders"
-          bullets={[
-            "Click on the plus icon on the right edge of the folder node you want your new folder to be nested in",
-            "Give your new folder a name and submit",
-          ]}
-          path="https://i.imgur.com/2b3FngG.gif"
-          alttext="instructions"
-        />
-        <Feature
-          header="Deleting Folders"
-          bullets={[
-            "Warning: this will permanently delete all contained files and sub folders!!",
-            "Click on the minus icon on the left edge of the folder node you want to delete",
-            "Type the name of the folder to confirm deletion of the directory and all sub directories and files contained (warning: this can not be undone)",
-          ]}
-          path="https://i.imgur.com/qXMlm0Y.gif"
-          alttext="instructions"
-        />
-      </section>
-
-      <section className=" flex flex-col items-center justify-center gap-3 mt-10">
-        <h2 className={title({ size: "md" })}> Tutorial Video </h2>
-        <iframe
-          className="mt-5 rounded-3xl w-[65vw] h-[40vw]"
-          src="https://www.youtube.com/embed/uRlccYIMNb4"
-          title="Next.Nav Tutorial"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
+        {cardData.map((datum) => <Feature
+          header={datum.header}
+          bullets={datum.bullets}
+          path={datum.path || ''}
+          alttext={datum.alttext || ''}
+          key={datum.header}
+        />)}
       </section>
       <section className="flex flex-col items-center gap-3 mt-20">
         <h2 className={title({ size: "md" })}>

@@ -1,26 +1,17 @@
 import React from 'react'
 import { Card, CardHeader, CardBody } from "@nextui-org/card";
-import {Divider} from "@nextui-org/divider"
 import { Image } from "@nextui-org/image";
-import { title, subtitle } from "./primitives";
-import NextLink from "next/link";
+import { title} from "./primitives";
 import { Link } from "@nextui-org/link";
 import {
 	GithubIcon,
 	LinkedInIcon,
 } from "@/components/icons";
 
-import { button as buttonStyles } from "@nextui-org/theme";
+import { ProfileProps } from "@/types";
 
-type props = {
-  header: string,
-  profile: string,
-  alttext: string,
-  linkedin: string,
-  github: string,
-}
 
-const Profile = ({header, profile, alttext, linkedin, github}: props) => {
+const Profile = ({header, profile, alttext, linkedin, github}: ProfileProps) => {
   return (
       <Card className='mt-10 p-5 flex flex-col w-[250px] justify-space-between align-center'>
         <CardHeader className='flex flex-col'>
