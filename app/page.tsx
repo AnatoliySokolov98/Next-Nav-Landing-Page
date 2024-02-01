@@ -45,8 +45,7 @@ export default function Home() {
                 color: "primary",
                 radius: "full",
                 variant: "shadow",
-              })}
-            >
+              })}>
               <Image
                 width={20}
                 height={20}
@@ -59,8 +58,7 @@ export default function Home() {
               isExternal
               as={NextLink}
               className={buttonStyles({ variant: "bordered", radius: "full" })}
-              href={siteConfig.links.github}
-            >
+              href={siteConfig.links.github}>
               <GithubIcon size={20} />
               GitHub
             </Link>
@@ -70,14 +68,27 @@ export default function Home() {
 
       <section className=" flex flex-col items-center justify-center gap-3 mt-20">
         <h2 className={title({ size: "md" })}> Features Demo </h2>
-        {cardData.map((datum) => <Feature
-          header={datum.header}
-          bullets={datum.bullets}
-          path={datum.path || ''}
-          alttext={datum.alttext || ''}
-          key={datum.header}
-        />)}
+        {cardData.map((datum) => (
+          <Feature
+            header={datum.header}
+            bullets={datum.bullets}
+            path={datum.path || ""}
+            alttext={datum.alttext || ""}
+            key={datum.header}
+          />
+        ))}
       </section>
+
+      <section className=" flex flex-col items-center justify-center gap-3 mt-10">
+        <h2 className={title({ size: "md" })}> Tutorial Video </h2>
+        <iframe
+          className="mt-5 rounded-3xl w-[65vw] h-[40vw]"
+          src="https://www.youtube.com/embed/uRlccYIMNb4"
+          title="Next.Nav Tutorial"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen></iframe>
+      </section>
+      
       <section className="flex flex-col items-center gap-3 mt-20">
         <h2 className={title({ size: "md" })}>
           {" "}
