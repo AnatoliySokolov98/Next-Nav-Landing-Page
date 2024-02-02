@@ -1,41 +1,44 @@
-import React from 'react'
+import React from "react";
 import { Card, CardHeader, CardBody } from "@nextui-org/card";
-import {Divider} from "@nextui-org/divider"
+import { Divider } from "@nextui-org/divider";
 import { Image } from "@nextui-org/image";
 import { title } from "./primitives";
 
-
-
-
 type props = {
-  header: string,
-  bullets: string[],
-  path: string,
-  alttext: string,
-}
+  header: string;
+  bullets: string[];
+  path: string;
+  alttext: string;
+};
 
-const Feature = ({header, bullets, path, alttext}: props) => {
+const Feature = ({ header, bullets, path, alttext }: props) => {
   return (
-    <Card className='mt-10 p-5 w-[65vw] flex flex-col justify-space-between align-center '>
-      <CardHeader className='flex flex-col'>
-        <h2 className={title({size: 'sm'})}>
-          {header}
-        </h2>
+    <Card className="mt-10 p-5 w-[65vw] flex flex-col justify-space-between align-center ">
+      <CardHeader className="flex flex-col">
+        <h2 className={title({ size: "sm" })}>{header}</h2>
       </CardHeader>
-      <CardBody className='flex flex-col gap-5 items-center'>
+      <CardBody className="flex flex-col gap-5 items-center">
         <Divider />
-        <div className='w-[80%] h-[100%]'>
-          <Image src={path} width='100%' height='100%' alt={alttext} className='outline outline-offset-1 outline-1 outline-blue-500'/>
+        <div className="w-[80%] h-[100%]">
+          <Image
+            src={path}
+            width="100%"
+            height="100%"
+            alt={alttext}
+            className="outline outline-offset-1 outline-1 outline-blue-500"
+          />
         </div>
-        <Divider/>
-        <ul className='list-disc list-inside'>
-        {bullets.map((item, index) => (
-          <li className='mb-3 ' key={index}>{item}</li>
-        ))}
+        <Divider />
+        <ul className="list-disc list-inside">
+          {bullets.map((item, index) => (
+            <li className="mb-3 " key={index}>
+              {item}
+            </li>
+          ))}
         </ul>
       </CardBody>
     </Card>
-  )
-}
+  );
+};
 
-export default Feature
+export default Feature;
