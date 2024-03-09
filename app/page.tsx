@@ -85,8 +85,8 @@ export default function Home() {
         <h2 className={title({ size: "md" })}> Tutorial Video </h2>
         <iframe
           className="mt-5 rounded-3xl w-[65vw] h-[40vw]"
-          src="https://www.youtube.com/embed/uRlccYIMNb4"
-          title="Next.Nav Tutorial"
+          src="https://www.youtube.com/embed/zfmwY87crUg?si=LJ6-d-7KV-na0qFu"
+          title="Next.Nav Tutorial (Updated Version 1.1)"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
