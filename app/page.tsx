@@ -15,7 +15,7 @@ export default function Home() {
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="flex-col">
           <div className="inline-block text-center justify-center">
-            <h1 className={title({ size: "lg" })}>NEXT.NAV</h1>
+            <h1 className={title({ size: "lg" })}>NEXT NAV</h1>
             <br />
             <br />
             <h2 className={title({ size: "sm" })}>
