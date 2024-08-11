@@ -33,7 +33,7 @@ export default function Home() {
               User friendly VSCode extension
             </h3>
             <h3 className={title({ color: "green", size: "sm" })}>
-              (18k+ downloads)
+              (20k+ downloads)
             </h3>
           </div>
           <div className="flex gap-3 justify-center mt-10">
