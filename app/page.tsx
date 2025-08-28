@@ -70,13 +70,13 @@ export default function Home() {
 
       <section className=" flex flex-col items-center justify-center gap-3 mt-20">
         <h2 className={title({ size: "md" })}> Features Demo </h2>
-        {cardData.map((datum) => (
+        {cardData.map((datum, index) => (
           <Feature
+            key={`feature-${index}`}
             header={datum.header}
             bullets={datum.bullets}
             path={datum.path || ""}
             alttext={datum.alttext || ""}
-            key={datum.header}
           />
         ))}
       </section>
@@ -98,8 +98,15 @@ export default function Home() {
           Meet Our Fantastic Team of Software Engineers
         </h2>
         <div className="flex items-center justify-center flex-wrap gap-10 w-[80vw] mt-10">
-          {profileData.map((datum) => (
-            <Profile key={datum.header} {...datum} />
+          {profileData.map((datum, index) => (
+            <Profile 
+              key={`profile-${index}`}
+              header={datum.header}
+              profile={datum.profile}
+              alttext={datum.alttext}
+              linkedin={datum.linkedin}
+              github={datum.github}
+            />
           ))}
         </div>
       </section>

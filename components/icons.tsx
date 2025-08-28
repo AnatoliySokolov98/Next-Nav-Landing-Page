@@ -53,6 +53,7 @@ export const LinkedInIcon: React.FC<IconSvgProps> = ({
 	return (
 		<svg
 		height={size || height}
+		width={size || width}
 		 viewBox="0 0 455 455"
 			{...props}
 		 >
